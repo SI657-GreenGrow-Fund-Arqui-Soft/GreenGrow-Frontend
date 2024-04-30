@@ -1,0 +1,102 @@
+/* Establece un tamaño de fuente base para el documento */
+html {
+    font-size: 16px;
+}
+
+/* Ajusta el tamaño de fuente de h1 y h2 para una mejor legibilidad en móviles */
+h1, h2 {
+    font-size: 2rem;
+}
+
+/* Hace que las imágenes dentro de los formularios sean totalmente responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Establece un ancho máximo y márgenes automáticos para centrar el contenido */
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2%;
+}
+
+/* Asegura que los encabezados y párrafos tengan suficiente espacio en dispositivos móviles */
+h1, h2, p {
+    margin-bottom: 1rem;
+}
+
+/* Ajusta el ancho de los campos de entrada para llenar el contenedor */
+.mat-form-field {
+    width: 100%;
+    margin-bottom: 2%;
+}
+/* Estilo para el mat-label */
+.mat-label {
+    color: #333; /* Cambia el color del texto de la etiqueta */
+    font-size: 16px; /* Cambia el tamaño de fuente de la etiqueta */
+  }
+
+  /* Estilo para el mat-select */
+  .mat-select {
+    width: 100%;
+    border: 1px solid #ccc; /* Agrega un borde alrededor del select */
+    border-radius: 4px; /* Añade esquinas redondeadas */
+    font-size: 16px; /* Cambia el tamaño de fuente del select */
+  }
+
+  /* Estilo para las mat-options */
+  .mat-option {
+    color: #333; /* Cambia el color del texto de las opciones */
+    font-size: 16px; /* Cambia el tamaño de fuente de las opciones */
+    background-color: #fff; /* Cambia el color de fondo de las opciones */
+  }
+
+  /* Estilo para las mat-options cuando están seleccionadas */
+  .mat-option.mat-selected {
+    background-color: #2196F3; /* Cambia el color de fondo de las opciones seleccionadas */
+    color: #fff; /* Cambia el color del texto de las opciones seleccionadas */
+  }
+/* Divide los elementos de fila en columnas en dispositivos móviles */
+.row {
+    display: flex;
+    display: flex;
+    flex-wrap: wrap;
+    flex-wrap:nowrap;
+    justify-content: space-between;
+    justify-content: space-between;
+    margin-bottom: 2%;
+    margin-bottom: 2%;
+    gap: 2%;
+}
+
+
+/* Ajusta el tamaño de fuente de las ayudas en los campos de entrada */
+.mat-hint {
+    font-size: 80%;
+}
+
+/* Aumenta el tamaño de la fuente y el espacio para la descripción */
+.text-area textarea {
+    height: 150px;
+    font-size: 100%;
+}
+
+/* Establece un ancho máximo y centra los botones en dispositivos móviles */
+.action {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2%;
+}
+
+/* Ajusta el tamaño de fuente de los botones */
+button {
+    width: 48%;
+    font-size: 120%;
+}
+
+/* Añade espacio adicional en la parte inferior de los botones */
+button + button {
+    margin-top: 1rem;
+}

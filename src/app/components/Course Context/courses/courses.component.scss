@@ -1,0 +1,160 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.top h1{
+    float: left;
+}
+.top button{
+
+    margin-left: 60%;
+}
+.container2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Divide en 4 columnas */
+    grid-gap: 2%; /* Espacio entre elementos */
+    box-sizing: border-box;
+    width: 80%;
+    margin-bottom: 150px;
+}
+
+/* Box grande (ocupa 2 espacios de alto) */
+.box-large {
+    grid-row: span 2; /* Ocupa 2 filas de alto */
+}
+
+/* Estilos para los boxes */
+.box1 {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 2%;
+}
+
+/* Imágenes */
+.box1 img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Títulos */
+.topleft, .bottomleft {
+    font-size: 2%;
+    color: #000; /* Color de texto en negro */
+}
+
+/* Ajustar estilos específicos para dispositivos móviles si es necesario */
+@media (max-width: 768px) {
+    .container2 {
+        grid-template-columns: repeat(1, 1fr); /* Cambiar a 2 columnas en dispositivos móviles */
+    }
+    .top button{
+        margin-left: 30%;
+        margin-top: 20%;
+        
+    }
+    
+    
+}
+
+
+
+.container {
+    width: 100%;
+    padding: 2%;
+    box-sizing: border-box;
+}
+
+/* Encabezados */
+.title {
+    font-size: 300%;
+    margin: 2% 0;
+    color: #000; /* Color de texto en negro */
+    margin-left: 50px;
+}
+
+/* Botones */
+button.mat-raised-button {
+    font-size: 2%;
+    padding: 2% 4%;
+}
+
+/* Iconos */
+mat-icon {
+    font-size: 4%;
+    margin: 2%;
+}
+
+/* Bloques de contenido */
+.first-block, .second-block, .trhith-block {
+    width: 100%;
+    margin-bottom: 4%;
+}
+
+/* Imágenes */
+.box img {
+    width: 100%;
+    height: auto;
+}
+
+/* Grid */
+mat-grid-list {
+    width: 100%;
+}
+
+/* Tarjetas */
+mat-card {
+    width: 40%;
+    margin: 2%;
+    display: inline-block;
+    color: #000; /* Color de texto en negro */
+}
+
+/* Estilos para diferentes bloques */
+.card-container, .card-container-2, .card-container-3 {
+    text-align: left;
+}
+.matBtn{
+    width: 50%;
+}
+.box{
+    transition: box-shadow 0.3s ease;
+    cursor:pointer;
+    position: relative;
+}
+
+.box:hover{
+    box-shadow: 0 0.3rem 0.8rem rgba(0,0,0,0.3);
+}
+
+/* Ajustar estilos específicos para dispositivos móviles si es necesario */
+@media (max-width: 768px) {
+    .container {
+        padding: 4%;
+    }
+    
+    .title {
+        font-size: 300%;
+    }
+    
+    button.mat-raised-button {
+        font-size: 3%;
+        padding: 3% 6%;
+    }
+    
+    mat-icon {
+        font-size: 6%;
+        margin: 3%;
+    }
+    
+    .box img {
+        width: 100%;
+    }
+    
+    mat-card {
+        width: 100%;
+        margin: 4% 0;
+    }
+}

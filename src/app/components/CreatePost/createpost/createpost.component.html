@@ -1,0 +1,77 @@
+<br />
+<br />
+<br />
+<div class="create-post">
+  <h2>Create a new post</h2>
+  <form (ngSubmit)="createPost()" #postForm="ngForm">
+    <label for="title">Title:</label>
+    <input
+      type="text"
+      id="title"
+      name="title"
+      [(ngModel)]="newPost.title"
+      required
+    />
+    <div
+      *ngIf="
+        postForm.controls['title'].invalid && postForm.controls['title'].touched
+      "
+    >
+      <p class="error">The title is required.</p>
+    </div>
+    <label for="description">Description:</label>
+    <textarea
+      id="description"
+      name="description"
+      [(ngModel)]="newPost.description"
+      required
+    ></textarea>
+    <label for="author">Author:</label>
+    <input
+      type="text"
+      id="author"
+      name="author"
+      [(ngModel)]="newPost.author"
+      required
+    />
+    <div
+      *ngIf="
+        postForm.controls['author'].invalid &&
+        postForm.controls['author'].touched
+      "
+    >
+      <p class="error">El autor es obligatorio.</p>
+    </div>
+    <label for="image">The author is required.</label>
+    <input
+      type="text"
+      id="image"
+      name="image"
+      [(ngModel)]="newPost.image"
+      required
+    />
+    <div
+      *ngIf="
+        postForm.controls['image'].invalid && postForm.controls['image'].touched
+      "
+    >
+      <p class="error">The image URL is required.</p>
+    </div>
+    <label for="tags">Tags:</label>
+    <input
+      type="text"
+      id="tags"
+      name="tags"
+      [(ngModel)]="newPost.tags"
+      required
+    />
+    <div
+      *ngIf="
+        postForm.controls['tags'].invalid && postForm.controls['tags'].touched
+      "
+    >
+      <p class="error">Labels are mandatory.</p>
+    </div>
+    <button type="submit" [disabled]="!postForm.valid">Create Post</button>
+  </form>
+</div>

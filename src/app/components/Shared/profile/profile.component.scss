@@ -1,0 +1,54 @@
+/* Estilos para la imagen del usuario */
+img {
+  max-width: 150%; /* Tamaño máximo de la imagen aumentado */
+  height: auto; /* Altura automática */
+  border: 2px solid #ddd; /* Borde alrededor de la imagen */
+  border-radius: 50%; /* Forma redonda */
+  margin: 10px; /* Espaciado exterior */
+  box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Sombra */
+  transition: transform 0.3s ease-in-out; /* Transición suave */
+  margin-bottom: 2%;
+
+  &:hover {
+      transform: scale(1.05); /* Aumentar tamaño al pasar el cursor */
+  }
+}
+h2{
+  font-size: 30px;
+  margin-bottom: 2%;
+}
+p{
+  font-size: 20px;
+  margin-bottom: 1%;
+}
+
+/* Estilos para los botones */
+button {
+  background-color: #4CAF50; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  padding: 15px 32px; /* Espaciado interior */
+  text-align: center; /* Centrar texto */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block; /* Para que se muestre en línea */
+  margin: 4px 2px; /* Espaciado exterior */
+  cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  transition: background-color 0.3s ease; /* Transición suave */
+
+  &:hover {
+      background-color: #45a049; /* Cambiar color de fondo al pasar el cursor */
+  }
+}
+
+/* Estilos para el contenedor del perfil */
+div {
+  text-align: center; /* Centrar elementos en el contenedor */
+  font-size: 25px;
+  padding: 20px; /* Espaciado interior */
+  background-color: #fafafa; /* Color de fondo más suave */
+  border: 1px solid #ccc; /* Borde del contenedor */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra */
+  margin: 20px; /* Espaciado exterior */
+}

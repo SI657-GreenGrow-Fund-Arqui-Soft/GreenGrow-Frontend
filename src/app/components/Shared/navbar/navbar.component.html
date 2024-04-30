@@ -1,0 +1,41 @@
+<mat-sidenav-container *ngIf="media.isActive('lt-md')">
+  <mat-sidenav #sidenav mode="over" fixedInViewport="true" class="sidenav">
+    <div fxLayout="column" fxLayoutGap="10px">
+      <a mat-button routerLink="/home">HOME</a>
+      <a mat-button routerLink="/articles">ARTICLES</a>
+      <a mat-button routerLink="/courses">COURSES</a>
+      <a mat-button routerLink="/comunnity">COMMUNITY</a>
+      <ng-container *ngIf="user; else loginButton">
+        <a mat-button (click)="navigateToProfile()">MY ACCOUNT</a>
+      </ng-container>
+      <ng-template #loginButton>
+        <a mat-button routerLink="/login">LOGIN</a>
+      </ng-template>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="toolbar">
+      <span>GreenGrow</span>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<mat-sidenav-container *ngIf="!media.isActive('lt-md')">
+  <mat-toolbar>
+    <span>GreenGrow</span>
+    <div class="spacer"></div>
+    <a mat-button routerLink="/home">HOME</a>
+    <a mat-button routerLink="/articles">ARTICLES</a>
+    <a mat-button routerLink="/courses">COURSES</a>
+    <a mat-button routerLink="/comunnity">COMMUNITY</a>
+    <ng-container *ngIf="user; else loginButton">
+      <a mat-button (click)="navigateToProfile()">MY ACCOUNT</a>
+    </ng-container>
+    <ng-template #loginButton>
+      <a mat-button routerLink="/login">LOGIN</a>
+    </ng-template>
+  </mat-toolbar>
+</mat-sidenav-container>

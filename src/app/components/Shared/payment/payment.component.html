@@ -1,0 +1,77 @@
+<br>
+<br>
+<br>  
+<div class="column-container">
+  <form [formGroup]="form">
+    <h1>Payment</h1>
+    <h3>Card Number</h3>
+    <mat-form-field>
+      <mat-label>1234  5678  9101  1121</mat-label>
+      <input matInput type="text" formControlName="cardNumber" class="custom-mat-input" (keyup)="formatCardNumber($event)" (keydown)="restrictInput($event)" maxlength="19">
+      <span class="card-type-image" *ngIf="cardType">
+        <img [src]="getCardImage()" [alt]="cardType" style="max-width: 50px; max-height: 30px;">
+      </span>
+    </mat-form-field>
+    <h3>Expiration Date</h3>
+    <mat-form-field>
+      <mat-label>Expiration Date</mat-label>
+      <input matInput type="text" formControlName="expirationDate" class="custom-mat-input" (keyup)="formatExpirationDate($event)">
+    </mat-form-field>
+    <h3>CCV</h3>
+    <mat-form-field>
+      <mat-label>CVV</mat-label>
+      <input matInput type="text" formControlName="cvv" class="custom-mat-input" maxlength="3">
+    </mat-form-field>
+    <mat-card-actions>
+      <button mat-raised-button [disabled]="!form.valid" type="submit" (click)="onSubmit()">Pay {{ getTotalLabel() }}</button>
+      <button mat-raised-button (click)="cancelPayment()">Cancel</button>
+    </mat-card-actions>
+    
+  </form>
+  
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Order Summary</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <table>
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Course</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let course of courses">
+            <td><img [src]="course.image" alt="{{ course.image }}" width="50" height="50"></td>
+            <td>{{ course.name }}</td>
+            <td>{{ course.price }}</td>
+            <td>{{ course.quantity }}</td>
+            <td>{{ course.total }}</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>{{ getSubtotalLabel() }}</td>
+            <td>{{ getShippingLabel() }}</td>
+            <td>{{ getTotalLabel() }}</td>
+          </tr>
+        </tfoot>
+      </table>
+    </mat-card-content>
+  </mat-card>
+  </div>
+  <!-- Agrega este código en tu plantilla HTML -->
+  <div *ngIf="showSuccessDialog" class="payment-success-dialog">
+    <h2>Successful payment</h2>
+    <img src="https://shop.synergysupplies.co/img/cms/icon-pay_confirmation.png" alt="Imagen de éxito" width="100" height="100">
+    <button mat-raised-button (click)="redirectToHome()">Confirmar</button>
+  </div>
+
+  <br>
+  <br>

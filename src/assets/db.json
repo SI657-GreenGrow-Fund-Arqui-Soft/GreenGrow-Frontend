@@ -1,0 +1,81 @@
+{
+  "#tendencia": [
+    {
+      "id": 1,
+      "imagen": "https://media.discordapp.net/attachments/1148057148522233868/1154633127466106940/imagen01.png?width=720&height=216",
+      "titulo": "LA DEFORESTACION INCREMENTO EN PANDEMIA",
+      "fecha": "2023-11-15",
+      "descripcion": "Durante la pandemia, la deforestación ha alcanzado niveles preocupantes en todo el mundo, destacando la necesidad urgente de prácticas agrícolas sostenibles y conservación forestal."
+    },
+    {
+      "id": 2,
+      "imagen": "https://cdn.discordapp.com/attachments/1148057148522233868/1154786883952459877/imagen02.png",
+      "titulo": "Cosecha de Otoño: Qué Plantar y Cómo Hacerlo",
+      "fecha": "2023-11-14",
+      "descripcion": "Prepara tu jardín de otoño con esta guía completa. Aprende sobre las mejores plantas para cultivar en esta temporada y cómo cuidarlas adecuadamente."
+    },
+    {
+      "id": 3,
+      "imagen": "https://media.discordapp.net/attachments/1148057148522233868/1154788734437425243/imagen03.png",
+      "titulo": "Entrevista a una Experta en Hidroponía",
+      "fecha": "2023-11-13",
+      "descripcion": "Prepara tu jardín de otoño con esta guía completa. Aprende sobre las mejores plantas para cultivar en esta temporada y cómo cuidarlas adecuadamente."
+    },
+    {
+      "id": 4,
+      "imagen": "https://media.discordapp.net/attachments/1148057148522233868/1154788734437425243/imagen03.png",
+      "titulo": "Agricultura regenerativa: restaurando la salud del suelo",
+      "fecha": "2023-11-12",
+      "descripcion": "La agricultura regenerativa gana popularidad a medida que los agricultores adoptan prácticas para mejorar la salud del suelo, aumentar la retención de agua y reducir la erosión."
+    },
+    {
+      "id": 5,
+      "imagen": "https://media.discordapp.net/attachments/1148057148522233868/1154788734437425243/imagen03.png",
+      "titulo": "Lanzamiento de drones agrícolas inteligentes",
+      "fecha": "2023-11-11",
+      "descripcion": "Una empresa presenta drones agrícolas equipados con tecnología de inteligencia artificial para monitorear cultivos, detectar enfermedades y optimizar el uso de recursos agrícolas."
+    },
+    {
+      "id": 6,
+      "imagen": "https://media.discordapp.net/attachments/1148057148522233868/1154788734437425243/imagen03.png",
+      "titulo": "Cultivo de alimentos orgánicos en aumento",
+      "fecha": "2023-11-10",
+      "descripcion": "El interés en los alimentos orgánicos sigue creciendo, y más agricultores adoptan prácticas sostenibles para satisfacer la demanda de productos libres de pesticidas y químicos."
+    },
+    {
+      "id": 7,
+      "imagen": "https://media.discordapp.net/attachments/1148057148522233868/1154788734437425243/imagen03.png",
+      "titulo": "Desarrollo de supercultivos para combatir el hambre",
+      "fecha": "2023-11-09",
+      "descripcion": "Científicos trabajan en la creación de supercultivos genéticamente mejorados para aumentar los rendimientos y abordar la creciente preocupación por la seguridad alimentaria a nivel mundial."
+    },
+    {
+      "id": 8,
+      "imagen": "https://media.discordapp.net/attachments/1148057148522233868/1154788734437425243/imagen03.png",
+      "titulo": "Innovación en la agricultura de precisión",
+      "fecha": "2023-11-08",
+      "descripcion": "Avances tecnológicos permiten una mayor precisión en la agricultura, con sensores y GPS mejorando la eficiencia en la siembra, el riego y la cosecha de cultivos."
+    },
+    {
+      "id": 9,
+      "imagen": "https://media.discordapp.net/attachments/1148057148522233868/1154788734437425243/imagen03.png",
+      "titulo": "La agroecología como enfoque sostenible",
+      "fecha": "2023-11-07",
+      "descripcion": "El enfoque agroecológico gana terreno, promoviendo la biodiversidad, la rotación de cultivos y prácticas agrícolas que benefician tanto a los agricultores como al medio ambiente."
+    },
+    {
+      "id": 10,
+      "imagen": "https://media.discordapp.net/attachments/1148057148522233868/1154788734437425243/imagen03.png",
+      "titulo": "Proyecto de reforestación en zonas agrícolas",
+      "fecha": "2023-11-06",
+      "descripcion": "Se lanza un proyecto de reforestación en áreas agrícolas para compensar las emisiones de carbono, mejorar la calidad del suelo y proporcionar beneficios adicionales a la comunidad."
+    },
+    {
+      "id": 11,
+      "imagen": "https://media.discordapp.net/attachments/1148057148522233868/1154788734437425243/imagen03.png",
+      "titulo": "Desarrollo de alimentos transgénicos resistentes a la sequía",
+      "fecha": "2023-11-05",
+      "descripcion": "Investigadores logran crear alimentos transgénicos que pueden resistir condiciones de sequía, ofreciendo una solución potencial para enfrentar los desafíos del cambio climático en la agricultura."
+    }
+  ]
+}

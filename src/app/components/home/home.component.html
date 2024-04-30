@@ -1,0 +1,67 @@
+<br>
+<br>
+<div class="container">
+
+    <!--Banner-->
+
+    <section class="banner">
+      <div class="containerB">            
+        <div class="boxB col2">
+          <h1>Welcome to GreenGrow!</h1>
+          <p id="txtBanner">
+            Where the future of agriculture and self-sufficiency begins. 
+            Discover how you can grow your own food at home, learn the latest 
+            farming and hydroponics techniques, and join a passionate community. 
+            Are you ready to transform your way of living?
+          </p>                
+        </div>
+        <div class="boxB col1">
+            <img class="medium" src="https://cdn.discordapp.com/attachments/1148057148522233868/1155527244375146516/hidro.png">              
+        </div>
+      </div>
+    </section>
+
+    <!--Cursos-->
+
+    <br>
+    <br>
+
+    <section class="destacados">
+      <div class="containerC">
+        <div class="boxC col3">
+          <h1>Most Featured</h1>
+        </div>
+        <div>
+          <p id="txtDestacados">
+            Cultivate your knowledge with GreenGrow's flagship courses and grow your passion for agriculture!
+          </p>
+        </div>
+        <div class="mat-card-cvr">
+          <mat-card class="card" *ngFor="let curso of courses">
+            <mat-card-header>
+              <mat-card-title>{{ curso.name }}</mat-card-title>
+            </mat-card-header>
+            <img [src]="curso.image" alt="{{ curso.name }}">
+            <mat-card-content>
+              <p>{{ curso.description }}</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button class="matBtn" (click)="redirectToPayment(curso)">$ {{ curso.price }}</button>
+              <button mat-button class="matBtn">{{ curso.rating }} ⭐</button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+        <br><br>
+        <div class="text-center">
+          <br><br>
+          <a mat-raised-button href="/courses" target="_blank">See All 🡢</a>
+        </div>
+      </div>
+      <br>
+      <br>
+    </section>   
+
+    
+    <!--Oferta-->
+
+</div>

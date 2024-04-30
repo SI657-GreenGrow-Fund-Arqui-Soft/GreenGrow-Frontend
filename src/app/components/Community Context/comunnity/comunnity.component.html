@@ -1,0 +1,104 @@
+<br />
+<br />
+<br />
+<br />
+<div
+  fxLayout.xs="column"
+  fxLayoutAlign.xs="stretch start"
+  fxLayout="row"
+  fxLayoutAlign="space-between"
+>
+  <!-- Columna 1: Lista de temas populares -->
+  <div fxFlex.xs="100" fxFlex.gt-sm="20">
+    <div class="border-trending">
+      <div class="trending">
+        <div class="trending-content">
+          <h3>Popular Topics</h3>
+          <div *ngFor="let trend of trends">
+            <p>{{ trend.name }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Columna 2: Barra de búsqueda y sección de posts -->
+  <!--
+  <mat-toolbar >
+    <mat-toolbar-row>
+      
+      <mat-form-field>
+        <input matInput placeholder="Buscar" />
+      </mat-form-field>
+    </mat-toolbar-row>
+  </mat-toolbar>
+-->
+
+  <div fxFlex.xs="100" fxFlex.gt-sm="60">
+    <div class="search-bar">
+      <div>Let's share what's on your mind...</div>
+      <button routerLink="/createpost">Create Post</button>
+    </div>
+
+    <div class="posts">
+      <div *ngFor="let post of posts">
+        <div class="post-header">
+          <h3>Agricultural events and fairs</h3>
+        </div>
+        <div class="post">
+          <div class="post-content">
+            <img [src]="post.image" alt="Imagen del Post" />
+            <div class="post-details">
+              <h4>{{ post.title }}</h4>
+              <div class="tags">
+                <span *ngFor="let tag of post.tags">{{ tag }}</span>
+              </div>
+              <div class="post-description">
+                <p>{{ post.description }}</p>
+              </div>
+              <p>{{ post.author }}</p>
+              <p class="post-date">{{ post.date }}</p>
+              <div class="interaction">
+                <i class="fa fa-heart" aria-hidden="true"></i>
+              </div>
+              <div class="post-stats">
+                <span>Views: {{ post.views }}</span>
+                <span>Likes: {{ post.likes }}</span>
+                <span>Comments: {{ post.comments }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Sección de posts -->
+
+  <!-- Columna 3: Publicidades (imágenes estáticas) -->
+  <div fxFlex.xs="100" fxFlex.gt-sm="20">
+    <div class="advertising">
+      <p>Advertising</p>
+      <a
+        href="https://www.agrisolucion.com/distribuidor/ver/greenhow/"
+        target="_blank"
+      >
+        <img
+          class="advertising-image"
+          src="https://media.discordapp.net/attachments/1148057148522233868/1154841794379526204/imagen06.png?width=509&height=676"
+          alt="Publicidad 1"
+        />
+      </a>
+      <a
+        href="https://www.agrisolucion.com/distribuidor/ver/greenhow/"
+        target="_blank"
+      >
+        <img
+          class="advertising-image"
+          src="https://media.discordapp.net/attachments/1148057148522233868/1154841794379526204/imagen06.png?width=509&height=676"
+          alt="Publicidad 2"
+        />
+      </a>
+      <!-- Agrega más publicidades aquí -->
+    </div>
+  </div>
+</div>

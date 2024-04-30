@@ -1,0 +1,77 @@
+<div class="container">
+  <div class="lista-izquierda">
+    <mat-list>
+      <mat-list-item id="fecha">{{ articleInit.fecha }}</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item id="fecha">Today</mat-list-item>
+      <mat-divider></mat-divider>
+      <ng-container *ngFor="let article of articles; let i = index">
+        <a href="{{ article.enlace }}" target="_blank">
+          <mat-list-item class="articlesx">
+            {{ article.titulo }}
+          </mat-list-item>
+        </a>
+        <mat-divider></mat-divider>
+      </ng-container>
+    </mat-list>
+  </div>
+  
+
+  <div class="centered">
+    <div class="tendencia-card">
+      <h3>#InTrend</h3>
+    </div>
+  
+    <div class="card" *ngIf="!loading">
+      <a href="{{ articleInit.enlace }}" target="_blank">
+        <img [src]="articleInit.imagen" alt="{{ articleInit.titulo }}" />
+        <h2>{{ articleInit.titulo }} {{ articleInit.fecha }}</h2>
+        <p>{{ articleInit.descripcion }}</p>
+      </a>
+    </div>
+  
+    <div class="card-container">
+      <div class="card1" *ngFor="let article of articles.slice(1); let i = index">
+        <a href="{{ article.enlace }}" target="_blank">
+          <img [src]="article.imagen" alt="{{ article.titulo }}" />
+          <h2>{{ article.titulo }} {{ article.fecha }}</h2>
+          <p>{{ article.descripcion }}</p>
+        </a>
+      </div>
+      
+    </div>
+    <div class="card2">
+      <a href="https://www.agrisolucion.com/distribuidor/ver/greenhow/">
+        <h5>Publicidad</h5>
+        <img src="https://media.discordapp.net/attachments/1148057148522233868/1154791821323554917/imagen04.png?width=720&height=151" alt="Título de la imagen" />
+      </a>
+    </div>
+  
+    
+  </div>
+  
+  <div class="container02">
+    <div class="card6">
+      <a href="https://www.agrisolucion.com/distribuidor/ver/greenhow/">
+        <h5>Advertising</h5>
+        <img src="https://media.discordapp.net/attachments/1148057148522233868/1154841794379526204/imagen06.png?width=503&height=668" alt="Título de la imagen" />
+      </a>
+      <!-- Repite el bloque de publicidad según sea necesario -->
+    </div>
+    <div class="card6">
+      <a href="https://www.agrisolucion.com/distribuidor/ver/greenhow/">
+        <h5>Advertising</h5>
+        <img src="https://media.discordapp.net/attachments/1148057148522233868/1154841794379526204/imagen06.png?width=503&height=668" alt="Título de la imagen" />
+      </a>
+      <!-- Repite el bloque de publicidad según sea necesario -->
+    </div>
+    <div class="card6">
+      <a href="https://www.agrisolucion.com/distribuidor/ver/greenhow/">
+        <h5>Advertising</h5>
+        <img src="https://media.discordapp.net/attachments/1148057148522233868/1154841794379526204/imagen06.png?width=503&height=668" alt="Título de la imagen" />
+      </a>
+      <!-- Repite el bloque de publicidad según sea necesario -->
+    </div>
+  </div>
+  
+</div>

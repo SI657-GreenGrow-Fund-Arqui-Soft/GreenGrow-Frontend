@@ -1,0 +1,187 @@
+/* Colores */
+
+/* Fuentes */
+$primary-font-family: sans-serif;
+
+/* Estilos generales */
+.body {
+  margin: 0;
+  padding: 0;
+}
+mat-mdc-card-content:last-child {
+  padding-bottom: 16px;
+  margin: 5%;
+}
+
+.h1 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Estilos de la tarjeta de resumen de pedido */
+mat-card {
+  margin-top: 50%;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+
+mat-card-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+mat-card-content {
+  padding: 16px;
+  display: inline-flex;
+  padding: 48px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 36px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+}
+
+th {
+  text-align: left;
+}
+
+td {
+  text-align: right;
+}
+
+tfoot {
+  font-weight: 600;
+}
+.column-container {
+  column-count: 2; /* Divide en dos columnas */
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-bottom: 10%;
+  margin-right: 10%;
+}
+
+/* Estilos del formulario de pago */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+mat-input {
+  font-size: 16px;
+}
+
+mat-raised-button {
+  width: 100%;
+  margin: 16px 0;
+}
+/* Establecer la visualización de la tarjeta y el formulario en columnas */
+.mat-card,
+form {
+  display: inline-block;
+  vertical-align: top;
+  width: 80%;
+  box-sizing: border-box;
+  padding: 16px;
+  border-radius: 4px;
+  border: 1.5px solid var(--Stroke, #ACACAC);
+  margin-left: 10%;
+}
+/* Añadir un margen entre las columnas */
+.mat-card {
+  margin-right: 16px;
+}
+.custom-mat-input {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 4px;
+  border: 1.5px solid var(--Stroke, #ACACAC);
+}
+.card-type-image {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Ajusta la posición horizontal según tus necesidades */
+  transform: translateY(-50%);
+}
+
+.payment-success-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.payment-success-dialog h2 {
+  margin-bottom: 20px;
+}
+/* Estilo para centrar la imagen en la ventana emergente */
+.payment-success-dialog img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px; /* Espacio superior opcional */
+}
+
+
+/* Asegurarse de que las columnas se apilen en dispositivos pequeños */
+@media (max-width: 576px) {
+  .mat-card,
+  form {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* Estilos responsive */
+@media (max-width: 576px) {
+  .mat-card {
+    width: 100%;
+    max-width: none;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  th,
+  td {
+    padding: 4px;
+  }
+
+  th {
+    font-size: 14px;
+  }
+
+  td {
+    font-size: 14px;
+  }
+
+  .mat-form-field {
+    margin-bottom: 8px;
+  }
+
+  .mat-input {
+    font-size: 14px;
+  }
+
+  .mat-raised-button {
+    margin: 8px 0;
+  }
+}

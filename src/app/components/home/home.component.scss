@@ -1,0 +1,103 @@
+section.banner{
+    background: linear-gradient(to left, #c2efd4, #c2efd4);
+    padding: 3rem 0;
+}
+
+section.oferta{
+    background: linear-gradient(to left, white, white);
+    padding: 3rem 0;
+}
+
+.containerB{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem, 1fr));
+    grid-gap: 2rem;
+}
+
+
+.col1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col2{
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.col3{
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    font-size: 2rem;
+    color: #224f34;
+    font-weight: bold;
+}
+
+#txtBanner{
+    margin: 2rem 0;
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+
+#txtDestacados{
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+img.medium{
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.card {
+    justify-content: center;
+    padding: 1rem 1rem;
+    display: inline-block;
+    width: 30%;
+}
+
+.mat-card-cvr{
+    width: 100%;
+    text-align:center;
+}
+
+.card img{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.matBtn{
+    width: 50%;
+}
+  
+.example-header-image {
+    background-size: cover;
+}
+
+.linkBtn {
+    background-color: white;
+    color: #224f34;
+    border-color: #224f34;
+    text-align: center;
+}
+
+.text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
