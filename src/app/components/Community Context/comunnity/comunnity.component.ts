@@ -7,6 +7,7 @@ import { DbService } from 'src/app/core/services/db.service';
   styleUrls: ['./comunnity.component.scss']
 })
 export class ComunnityComponent {
+  
   posts: any[] = [];
   trends: any[] = [];
 
