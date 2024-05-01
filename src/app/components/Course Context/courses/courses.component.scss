@@ -24,6 +24,10 @@ body {
 /* Box grande (ocupa 2 espacios de alto) */
 .box-large {
     grid-row: span 2; /* Ocupa 2 filas de alto */
+  img{
+    width: 400px;
+    height: auto;
+  }
 }
 
 /* Estilos para los boxes */
@@ -41,8 +45,8 @@ body {
 
 /* Títulos */
 .topleft, .bottomleft {
-    font-size: 2%;
-    color: #000; /* Color de texto en negro */
+    font-size: 140%;
+    color: #989898;
 }
 
 /* Ajustar estilos específicos para dispositivos móviles si es necesario */
@@ -53,10 +57,10 @@ body {
     .top button{
         margin-left: 30%;
         margin-top: 20%;
-        
+
     }
-    
-    
+
+
 }
 
 
@@ -134,25 +138,25 @@ mat-card {
     .container {
         padding: 4%;
     }
-    
+
     .title {
         font-size: 300%;
     }
-    
+
     button.mat-raised-button {
         font-size: 3%;
         padding: 3% 6%;
     }
-    
+
     mat-icon {
         font-size: 6%;
         margin: 3%;
     }
-    
+
     .box img {
         width: 100%;
     }
-    
+
     mat-card {
         width: 100%;
         margin: 4% 0;

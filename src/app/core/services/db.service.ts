@@ -11,7 +11,7 @@ import { DataModel } from '../models/data.model';
   providedIn: 'root',
 })
 export class DbService {
-  baseUrl = 'https://greengrow.zeabur.app/api/green-grow/v1';
+  baseUrl = 'https://green-grow-421820.rj.r.appspot.com/api/green-grow/v1';
 
   constructor(private http: HttpClient) {}
 
