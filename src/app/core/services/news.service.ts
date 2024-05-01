@@ -7,13 +7,13 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
     providedIn: 'root'
 })
 export class NewsService {
-    baseUrl = 'https://greengrow.zeabur.app/api/green-grow/v1/articles';
+    baseUrl = 'https://green-grow-421820.rj.r.appspot.com/api/green-grow/v1/articles';
 
     constructor(private http: HttpClient) { }
 
     httpOptions = {
       headers: new HttpHeaders({
-          'Content-Type': 'application/json'  
+          'Content-Type': 'application/json'
       })
     };
 
@@ -28,7 +28,7 @@ export class NewsService {
         'Something happened with request, please try again later'
       );
     }
-    
+
     //GET
     getListArticles(): Observable<ArticleModel>{
       return this.http.get<ArticleModel>(this.baseUrl)

@@ -15,13 +15,13 @@
       </ng-container>
     </mat-list>
   </div>
-  
+
 
   <div class="centered">
     <div class="tendencia-card">
       <h3>#InTrend</h3>
     </div>
-  
+
     <div class="card" *ngIf="!loading">
       <a href="{{ articleInit.enlace }}" target="_blank">
         <img [src]="articleInit.imagen" alt="{{ articleInit.titulo }}" />
@@ -29,7 +29,7 @@
         <p>{{ articleInit.descripcion }}</p>
       </a>
     </div>
-  
+
     <div class="card-container">
       <div class="card1" *ngFor="let article of articles.slice(1); let i = index">
         <a href="{{ article.enlace }}" target="_blank">
@@ -38,40 +38,40 @@
           <p>{{ article.descripcion }}</p>
         </a>
       </div>
-      
+
     </div>
     <div class="card2">
       <a href="https://www.agrisolucion.com/distribuidor/ver/greenhow/">
         <h5>Publicidad</h5>
-        <img src="https://media.discordapp.net/attachments/1148057148522233868/1154791821323554917/imagen04.png?width=720&height=151" alt="Título de la imagen" />
+        <img src="https://www.agrisolucion.com/media/post/banner/Biofertilizante_alternativa_ante_amenaza_mundial_por_escasez_de_alimentos.png?width=720&height=151" alt="Título de la imagen" />
       </a>
     </div>
-  
-    
+
+
   </div>
-  
+
   <div class="container02">
     <div class="card6">
       <a href="https://www.agrisolucion.com/distribuidor/ver/greenhow/">
         <h5>Advertising</h5>
-        <img src="https://media.discordapp.net/attachments/1148057148522233868/1154841794379526204/imagen06.png?width=503&height=668" alt="Título de la imagen" />
+        <img src="https://www.agrisolucion.com/media/post/banner/Stemphylium-solani.jpeg?width=503&height=668" alt="Título de la imagen" />
       </a>
       <!-- Repite el bloque de publicidad según sea necesario -->
     </div>
     <div class="card6">
       <a href="https://www.agrisolucion.com/distribuidor/ver/greenhow/">
         <h5>Advertising</h5>
-        <img src="https://media.discordapp.net/attachments/1148057148522233868/1154841794379526204/imagen06.png?width=503&height=668" alt="Título de la imagen" />
+        <img src="https://www.agrisolucion.com/media/suppliers/20201124104830349606060032eb2f.jpeg?width=503&height=668" alt="Título de la imagen" />
       </a>
       <!-- Repite el bloque de publicidad según sea necesario -->
     </div>
     <div class="card6">
       <a href="https://www.agrisolucion.com/distribuidor/ver/greenhow/">
         <h5>Advertising</h5>
-        <img src="https://media.discordapp.net/attachments/1148057148522233868/1154841794379526204/imagen06.png?width=503&height=668" alt="Título de la imagen" />
+        <img src="https://www.agrisolucion.com/media/post/banner/c515c1_miaz.jpg?width=503&height=668" alt="Título de la imagen" />
       </a>
       <!-- Repite el bloque de publicidad según sea necesario -->
     </div>
   </div>
-  
+
 </div>

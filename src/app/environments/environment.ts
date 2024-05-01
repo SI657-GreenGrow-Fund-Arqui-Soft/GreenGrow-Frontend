@@ -1,11 +1,11 @@
 export const environment = {
   firebase: {
-    projectId: 'deploy-greengrow',
-    appId: '1:937225638162:web:0f322e48242c8a7a06a3cb',
-    storageBucket: 'angular-auth-opsource.appspot.com',
-    apiKey: 'AIzaSyBikZNdrzDEry1coAIKih8QcTjEfmBMmAM',
-    authDomain: 'angular-auth-opsource.firebaseapp.com',
-    messagingSenderId: '937225638162',
-    measurementId: 'G-6RV4ZQ83X4',
+    apiKey: "AIzaSyDObw-57RzyDKVTlqGNkmgo1sK3n02_WHM",
+    authDomain: "green-grow2.firebaseapp.com",
+    projectId: "green-grow2",
+    storageBucket: "green-grow2.appspot.com",
+    messagingSenderId: "260455459603",
+    appId: "1:260455459603:web:d1adac0f144f07746788e6",
+    measurementId: "G-1SB0FQHM6E"
   },
 };
