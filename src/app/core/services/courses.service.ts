@@ -7,13 +7,13 @@ import { DataModel } from '../models/data.model';
     providedIn: 'root'
 })
 export class CoursesService {
-    baseUrl = 'https://greengrow.zeabur.app/api/green-grow/v1/courses';
+    baseUrl = 'https://green-grow-421820.rj.r.appspot.com/api/green-grow/v1/courses';
 
     constructor(private http: HttpClient) { }
 
     httpOptions = {
       headers: new HttpHeaders({
-          'Content-Type': 'application/json'  
+          'Content-Type': 'application/json'
       })
     };
 
@@ -28,7 +28,7 @@ export class CoursesService {
         'Something happened with request, please try again later'
       );
     }
-    
+
     //GET
     getListCourses(): Observable<DataModel>{
       return this.http.get<DataModel>(this.baseUrl)
