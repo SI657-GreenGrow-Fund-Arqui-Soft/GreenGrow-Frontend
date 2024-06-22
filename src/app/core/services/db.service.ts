@@ -6,14 +6,17 @@ import {
   HttpHeaders,
 } from '@angular/common/http';
 import { DataModel } from '../models/data.model';
+import {AuthService} from "./auth.service";
 
 @Injectable({
   providedIn: 'root',
 })
 export class DbService {
-  baseUrl = 'https://green-grow-421820.rj.r.appspot.com/api/green-grow/v1';
+  //baseUrl = 'https://green-grow-421820.rj.r.appspot.com/api/green-grow/v1';
+  baseUrl = 'http://localhost:8000/api/green-grow/v1';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private authService: AuthService) {}
+  token! : string;
 
   httpOptions = {
     headers: new HttpHeaders({

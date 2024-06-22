@@ -1,21 +1,16 @@
-import { Component, inject } from '@angular/core';
-import {
-  FormBuilder,
-  FormControl,
-  FormGroup,
-  ReactiveFormsModule,
-  Validators,
-} from '@angular/forms';
-import { NgIf } from '@angular/common';
-import { Router, RouterModule } from '@angular/router';
+import {Component, inject} from '@angular/core';
+import {FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators,} from '@angular/forms';
+import {NgIf} from '@angular/common';
+import {Router, RouterModule} from '@angular/router';
 
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
-import { AuthService, Credential } from 'src/app/core/services/auth.service';
-import { ButtonProviders } from 'src/app/components/button-providers/button-providers.component'
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
+import {AuthService, Credential} from 'src/app/core/services/auth.service';
+import {ButtonProviders} from 'src/app/components/button-providers/button-providers.component'
+import {DbService} from "../../../core/services/db.service";
 
 interface LogInForm {
   email: FormControl<string>;
@@ -42,13 +37,16 @@ interface LogInForm {
 export default class LogInComponent {
   hide = true;
 
+  constructor( private dbService: DbService, private authService: AuthService) {
+  }
   formBuilder = inject(FormBuilder);
 
-  private authService = inject(AuthService);
 
   private router = inject(Router);
 
   private _snackBar = inject(MatSnackBar);
+
+  private _loginObject: any;
 
   form: FormGroup<LogInForm> = this.formBuilder.group({
     email: this.formBuilder.control('', {
@@ -60,13 +58,13 @@ export default class LogInComponent {
       nonNullable: true,
     }),
 
-    
+
   });
 
   goToSignUp() {
     this.router.navigate(['/signup']); // Esto navegará al componente SignUpComponent
   }
-  
+
   get isEmailValid(): string | boolean {
     const control = this.form.get('email');
 
@@ -90,9 +88,10 @@ export default class LogInComponent {
     };
 
     try {
+      let identity = await this.authService.logInForBackend(credential)
+      this.authService.tokenSetter(identity.idToken);
       await this.authService.logInWithEmailAndPassword(credential);
       const snackBarRef = this.openSnackBar();
-
       snackBarRef.afterDismissed().subscribe(() => {
         console.log("funciona")
         this.router.navigateByUrl('/home');
