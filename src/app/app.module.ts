@@ -23,7 +23,7 @@ import { ArticlesComponent } from './components/Educational Content Context/arti
 import { ComunnityComponent } from './components/Community Context/comunnity/comunnity.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { HttpClientModule } from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
@@ -42,6 +42,8 @@ import { CreatepostComponent } from './components/CreatePost/createpost/createpo
 import { ProfileComponent } from './components/Shared/profile/profile.component';
 import { CommonModule } from '@angular/common';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import {AuthInterceptor} from "./core/services/auth.interceptor";
+import {AuthService} from "./core/services/auth.service";
 
 @NgModule({
   declarations: [
@@ -55,7 +57,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     PaymentComponent,
     CreatepostComponent,
     ProfileComponent,
-    
+
   ],
   imports: [
     BrowserModule,
@@ -90,7 +92,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 
 
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

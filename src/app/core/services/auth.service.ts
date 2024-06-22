@@ -1,15 +1,15 @@
-import { Injectable, inject } from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import {
   Auth,
   AuthProvider,
-  GithubAuthProvider,
-  GoogleAuthProvider,
-  UserCredential,
   authState,
   createUserWithEmailAndPassword,
+  GithubAuthProvider,
+  GoogleAuthProvider,
   signInWithEmailAndPassword,
   signInWithPopup,
-  updateProfile as updateProfileFirebase, // Importa la función de actualización de perfil
+  updateProfile as updateProfileFirebase,
+  UserCredential,
 } from '@angular/fire/auth';
 
 export interface Credential {
@@ -17,22 +17,31 @@ export interface Credential {
   password: string;
 }
 
+export interface BackendCredential {
+  email: string;
+  password: string;
+  returnSecureToken: boolean;
+}
+
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
+  userData: any;
   private auth: Auth = inject(Auth);
-
   readonly authState$ = authState(this.auth);
+  private backUrl = "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=";
+  private firebaseKey = "AIzaSyDObw-57RzyDKVTlqGNkmgo1sK3n02_WHM";
+
+  private secureToken: string = '';
 
   signUpWithEmailAndPassword(credential: Credential): Promise<UserCredential> {
     return createUserWithEmailAndPassword(
       this.auth,
-      credential.email, 
+      credential.email,
       credential.password
     );
   }
-
   logInWithEmailAndPassword(credential: Credential) {
     return signInWithEmailAndPassword(
       this.auth,
@@ -40,6 +49,33 @@ export class AuthService {
       credential.password
     );
   }
+  tokenGetter(){
+    return this.secureToken;
+  }
+  tokenSetter(token: string){
+    this.secureToken = token;
+    console.log(this.secureToken);
+  }
+
+  async logInForBackend(credential: Credential) {
+    let backendCredential: BackendCredential =  {
+      email: credential.email,
+      password: credential.password,
+      returnSecureToken: true,
+    };
+    const response = await fetch(`${this.backUrl} + ${this.firebaseKey}`,
+      {
+      method: 'POST',
+      body: JSON.stringify(backendCredential),
+      headers: {'Content-Type': 'application/json'},
+    })
+
+    if(!response.ok){
+      throw new Error('Network Error' + response.statusText);
+    }
+    return response.json();
+  }
+
 
   logOut(): Promise<void> {
     return this.auth.signOut();
@@ -58,7 +94,7 @@ export class AuthService {
 
     return this.callPopUp(provider);
   }
-  
+
   async callPopUp(provider: AuthProvider): Promise<UserCredential> {
     try {
       const result = await signInWithPopup(this.auth, provider);
@@ -77,4 +113,6 @@ export class AuthService {
       throw error; // Puedes manejar el error de la manera que desees
     }
   }
+
+
 }

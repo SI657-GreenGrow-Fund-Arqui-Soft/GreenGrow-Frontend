@@ -24,6 +24,13 @@
           <mat-error *ngIf="isEmailValid as messsage">{{ messsage }}</mat-error>
         </mat-form-field>
       </div>
+      <div>
+        <mat-form-field>
+          <mat-label>Celular</mat-label>
+          <input matInput formControlName="cellNumber" />
+          <mat-error>This field is required</mat-error>
+        </mat-form-field>
+      </div>
 
       <div>
         <mat-form-field>
@@ -56,6 +63,6 @@
     <span class="small-text log-in-redirect"
       >Already have an account? <a routerLink="/log-in">Log in</a></span
     >
-    
+
   </div>
 </div>

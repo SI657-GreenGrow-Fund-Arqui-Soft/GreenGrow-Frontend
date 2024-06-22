@@ -22,6 +22,7 @@ interface SignUpForm {
   lastName: FormControl<string>;
   email: FormControl<string>;
   password: FormControl<string>;
+  cellNumber: FormControl<string>;
 }
 
 @Component({
@@ -63,6 +64,10 @@ export default class SignUpComponent {
       validators: Validators.required,
       nonNullable: true,
     }),
+    cellNumber: this.formBuilder.control('', {
+      validators: Validators.required,
+      nonNullable: true,
+    }),
   });
 
   private authService = inject(AuthService);
@@ -97,9 +102,11 @@ export default class SignUpComponent {
     };
 
     try {
+
       const userCredential = await this.authService.signUpWithEmailAndPassword(credential);
       const user = userCredential.user;
-
+      let identity = await this.authService.logInForBackend(credential)
+      this.authService.tokenSetter(identity.idToken);
       // Actualiza los datos adicionales del usuario en Firebase
       await this.authService.updateProfile(user, userData);
 
