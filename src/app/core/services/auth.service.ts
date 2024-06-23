@@ -50,10 +50,17 @@ export class AuthService {
     );
   }
   tokenGetter(){
-    return this.secureToken;
+    const token = localStorage.getItem('authToken');
+    if (token){
+      return token;
+    } else {
+      console.log('No hay token almacenado');
+      return null;
+    }
   }
   tokenSetter(token: string){
     this.secureToken = token;
+    localStorage.setItem('authToken', token);
     console.log(this.secureToken);
   }
 
@@ -78,6 +85,7 @@ export class AuthService {
 
 
   logOut(): Promise<void> {
+    localStorage.removeItem('authToken');
     return this.auth.signOut();
   }
 
