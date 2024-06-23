@@ -7,8 +7,8 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
     providedIn: 'root'
 })
 export class NewsService {
-  //baseUrl = 'https://green-grow-421820.rj.r.appspot.com/api/green-grow/v1/articles';
-  baseUrl = 'http://localhost:8000/api/green-grow/v1/articles';
+  baseUrl = 'https://green-grow-421820.rj.r.appspot.com/api/green-grow/v1/articles';
+  //baseUrl = 'http://localhost:8000/api/green-grow/v1/articles';
 
     constructor(private http: HttpClient) { }
 
