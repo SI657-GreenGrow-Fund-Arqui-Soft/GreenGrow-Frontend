@@ -25,7 +25,8 @@
     <div class="card" *ngIf="!loading">
       <a href="{{ articleInit.enlace }}" target="_blank">
         <img [src]="articleInit.imagen" alt="{{ articleInit.titulo }}" />
-        <h2>{{ articleInit.titulo }} {{ articleInit.fecha }}</h2>
+        <h2>{{ articleInit.titulo }}</h2>
+        <div class="date">{{ articleInit.fecha }}</div>
         <p>{{ articleInit.descripcion }}</p>
       </a>
     </div>
@@ -34,7 +35,8 @@
       <div class="card1" *ngFor="let article of articles.slice(1); let i = index">
         <a href="{{ article.enlace }}" target="_blank">
           <img [src]="article.imagen" alt="{{ article.titulo }}" />
-          <h2>{{ article.titulo }} {{ article.fecha }}</h2>
+          <h2>{{ article.titulo }}</h2>
+          <div class="date">{{ article.fecha }}</div>
           <p>{{ article.descripcion }}</p>
         </a>
       </div>
@@ -43,7 +45,7 @@
     <div class="card2">
       <a href="https://www.agrisolucion.com/distribuidor/ver/greenhow/">
         <h5>Publicidad</h5>
-        <img src="https://www.agrisolucion.com/media/post/banner/Biofertilizante_alternativa_ante_amenaza_mundial_por_escasez_de_alimentos.png?width=720&height=151" alt="Título de la imagen" />
+        <img src="https://i.imgur.com/9lYfaD3.png" alt="Título de la imagen" />
       </a>
     </div>
 
@@ -54,21 +56,21 @@
     <div class="card6">
       <a href="https://www.agrisolucion.com/distribuidor/ver/greenhow/">
         <h5>Advertising</h5>
-        <img src="https://www.agrisolucion.com/media/post/banner/Stemphylium-solani.jpeg?width=503&height=668" alt="Título de la imagen" />
+        <img src="https://i.imgur.com/O6WYNkN.png" alt="Título de la imagen" />
       </a>
       <!-- Repite el bloque de publicidad según sea necesario -->
     </div>
     <div class="card6">
       <a href="https://www.agrisolucion.com/distribuidor/ver/greenhow/">
         <h5>Advertising</h5>
-        <img src="https://www.agrisolucion.com/media/suppliers/20201124104830349606060032eb2f.jpeg?width=503&height=668" alt="Título de la imagen" />
+        <img src="https://i.imgur.com/O6WYNkN.png" alt="Título de la imagen" />
       </a>
       <!-- Repite el bloque de publicidad según sea necesario -->
     </div>
     <div class="card6">
       <a href="https://www.agrisolucion.com/distribuidor/ver/greenhow/">
         <h5>Advertising</h5>
-        <img src="https://www.agrisolucion.com/media/post/banner/c515c1_miaz.jpg?width=503&height=668" alt="Título de la imagen" />
+        <img src="https://i.imgur.com/O6WYNkN.png" alt="Título de la imagen" />
       </a>
       <!-- Repite el bloque de publicidad según sea necesario -->
     </div>

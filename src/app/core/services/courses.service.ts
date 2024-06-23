@@ -7,8 +7,8 @@ import { DataModel } from '../models/data.model';
     providedIn: 'root'
 })
 export class CoursesService {
- // baseUrl = 'https://green-grow-421820.rj.r.appspot.com/api/green-grow/v1/courses';
-  baseUrl = 'http://localhost:8000/api/green-grow/v1/courses';
+  baseUrl = 'https://green-grow-421820.rj.r.appspot.com/api/green-grow/v1/courses';
+  //baseUrl = 'http://localhost:8000/api/green-grow/v1/courses';
 
     constructor(private http: HttpClient) { }
 
