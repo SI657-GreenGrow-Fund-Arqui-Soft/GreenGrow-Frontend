@@ -1,3 +1,4 @@
+
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
@@ -8,81 +9,109 @@ body {
 .top h1{
     float: left;
 }
-.top button{
 
-    margin-left: 60%;
-}
 .container2 {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Divide en 4 columnas */
-    grid-gap: 2%; /* Espacio entre elementos */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 200px;
+    gap: 10px; /* Espacio entre elementos */
+    width: 100%;
+    padding: 20px;
     box-sizing: border-box;
-    width: 80%;
-    margin-bottom: 150px;
 }
 
-/* Box grande (ocupa 2 espacios de alto) */
+.box {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
 .box-large {
-    grid-row: span 2; /* Ocupa 2 filas de alto */
-  img{
-    width: 400px;
-    height: auto;
-  }
+    grid-column: span 2;
+    grid-row: span 2;
 }
 
-/* Estilos para los boxes */
-.box1 {
-    text-align: center;
-    border: 1px solid #ddd;
-    padding: 2%;
+.box-small {
+    grid-column: span 1;
+    grid-row: span 1;
 }
 
-/* Imágenes */
-.box1 img {
-    max-width: 100%;
-    height: auto;
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill; /* Forzar a llenar todo el contenedor */
+    display: block;
 }
 
-/* Títulos */
 .topleft, .bottomleft {
-    font-size: 140%;
-    color: #989898;
+    position: absolute;
+    padding: 10px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 1.2rem;
 }
 
-/* Ajustar estilos específicos para dispositivos móviles si es necesario */
+.topleft {
+    top: 10px;
+    left: 10px;
+}
+
+.bottomleft {
+    bottom: 10px;
+    left: 10px;
+}
+
+/* Ajustar estilos específicos para dispositivos móviles */
 @media (max-width: 768px) {
     .container2 {
-        grid-template-columns: repeat(1, 1fr); /* Cambiar a 2 columnas en dispositivos móviles */
-    }
-    .top button{
-        margin-left: 30%;
-        margin-top: 20%;
-
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 150px;
     }
 
+    .box-large {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
 
+    .box-small {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
 }
-
-
-
+/* Estilos para diferentes bloques */
+.card-container, .card-container-2, .card-container-3 {
+    text-align: left;
+    margin-bottom: 1%;
+}
 .container {
+    
     width: 100%;
-    padding: 2%;
+    padding: 1%;
     box-sizing: border-box;
+
 }
 
 /* Encabezados */
 .title {
     font-size: 300%;
-    margin: 2% 0;
+    margin: 2% ;
     color: #000; /* Color de texto en negro */
-    margin-left: 50px;
+    margin-left: 20px;
 }
 
 /* Botones */
 button.mat-raised-button {
     font-size: 2%;
     padding: 2% 4%;
+    
+    
+}
+
+.button1{
+    background-color: #ffffff;
+    margin-left: 60%;
+    margin-top: 40px;
 }
 
 /* Iconos */
@@ -116,10 +145,7 @@ mat-card {
     color: #000; /* Color de texto en negro */
 }
 
-/* Estilos para diferentes bloques */
-.card-container, .card-container-2, .card-container-3 {
-    text-align: left;
-}
+
 .matBtn{
     width: 50%;
 }
@@ -127,6 +153,7 @@ mat-card {
     transition: box-shadow 0.3s ease;
     cursor:pointer;
     position: relative;
+    gap: 200px;
 }
 
 .box:hover{
