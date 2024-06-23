@@ -1,29 +1,53 @@
-section.banner{
+section.banner {
     background: linear-gradient(to left, #c2efd4, #c2efd4);
-    padding: 3rem 0;
+    padding: 12rem 2rem;
 }
 
-section.oferta{
+section.oferta {
     background: linear-gradient(to left, white, white);
     padding: 3rem 0;
 }
 
-.containerB{
+.banner-button {
+    width: 30%;
+    background-color: #28a745;
+    border: 1px solid black;
+    color: white;
+    padding: 8px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.banner-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.banner-button:active {
+    background-color: #1e7e34;
+    transform: translateY(0);
+}
+
+.containerB {
     width: 90%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     grid-gap: 2rem;
 }
 
 
-.col1{
+.col1 {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.col2{
+.col2 {
     padding: 1rem 2rem;
     display: flex;
     justify-content: center;
@@ -31,68 +55,125 @@ section.oferta{
 }
 
 
-.col3{
+.col3 {
     padding: 1rem 2rem;
     display: flex;
     justify-content: center;
 }
 
-h1{
-    font-size: 2rem;
+h1 {
+    font-size: 4rem;
     color: #224f34;
     font-weight: bold;
 }
 
-#txtBanner{
-    margin: 2rem 0;
-    font-size: 1.3rem;
-    line-height: 2rem;
+.destacados-button {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    background-color: transparent;
+    border: 2px solid #28a745; 
+    color: #28a745; 
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
-#txtDestacados{
+#txtBanner {
+    margin: 2rem 0;
+    font-size: 1.3rem;
+    line-height: 3.5rem;
+}
+
+#txtDestacados {
     padding: 1rem 2rem;
     display: flex;
     justify-content: center;
     font-size: 1rem;
 }
 
-img.medium{
+img.medium {
     width: 50%;
     height: 100%;
     border-radius: 10px;
 }
 
-.card {
+.mat-card-cvr {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
-    padding: 1rem 1rem;
-    display: inline-block;
-    width: 30%;
 }
 
-.mat-card-cvr{
-    width: 100%;
-    text-align:center;
-}
-
-.card img{
-    width: 50%;
-    height: 50%;
-    object-fit: cover;
-}
-
-.matBtn{
-    width: 50%;
-}
-  
-.example-header-image {
-    background-size: cover;
-}
-
-.linkBtn {
+.card {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
     background-color: white;
-    color: #224f34;
-    border-color: #224f34;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.mat-card-header {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
     text-align: center;
+}
+
+.mat-card-title {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.mat-card-content {
+    padding: 20px;
+    font-size: 1em;
+    color: #333;
+}
+
+.mat-card-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 20px;
+}
+
+.matBtn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.matBtn:hover {
+    background-color: #218838;
+}
+
+.matBtn:active {
+    background-color: #1e7e34;
+}
+
+.mat-card-actions_wrapper{
+    display: flex;
+    justify-content: space-between;
 }
 
 .text-center {
@@ -100,4 +181,3 @@ img.medium{
     justify-content: center;
     align-items: center;
 }
-

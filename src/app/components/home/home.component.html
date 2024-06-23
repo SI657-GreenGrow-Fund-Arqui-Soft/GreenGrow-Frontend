@@ -14,9 +14,12 @@
             farming and hydroponics techniques, and join a passionate community.
             Are you ready to transform your way of living?
           </p>
+          <button class="banner-button">
+            Join Us
+          </button>
         </div>
-        <div class="boxB col1">
-            <img class="medium" src="https://cdn.portalfruticola.com/2020/12/39f677b7-imagen7-1024x759.jpg">
+        <div class="col1">
+            <img class="medium" src="https://cdn.discordapp.com/attachments/1223445236227903600/1254297092600627270/Mask_group.png?ex=6678fab2&is=6677a932&hm=5ac1386294602616204154e1b5e45165f8da16d0ffc16f911769fa69d44c33f3&.jpg">
         </div>
       </div>
     </section>
@@ -39,13 +42,16 @@
         <div class="mat-card-cvr">
           <mat-card class="card" *ngFor="let curso of courses">
             <mat-card-header>
-              <mat-card-title>{{ curso.name }}</mat-card-title>
+              <mat-card-title>
+                <img [src]="curso.image" alt="{{ curso.name }}">
+              </mat-card-title>
             </mat-card-header>
-            <img [src]="curso.image" alt="{{ curso.name }}">
+            
             <mat-card-content>
+              <p>{{ curso.name }}</p>
               <p>{{ curso.description }}</p>
             </mat-card-content>
-            <mat-card-actions>
+            <mat-card-actions class="mat-card-actions_wrapper">
               <button mat-button class="matBtn" (click)="redirectToPayment(curso)">$ {{ curso.price }}</button>
               <button mat-button class="matBtn">{{ curso.rating }} ⭐</button>
             </mat-card-actions>
@@ -54,7 +60,7 @@
         <br><br>
         <div class="text-center">
           <br><br>
-          <a mat-raised-button href="/courses" >See All 🡢</a>
+          <a class="destacados-button" href="/courses" >See All 🡢</a>
         </div>
       </div>
       <br>
