@@ -50,7 +50,7 @@
                 </mat-card-header>
                 
                 <mat-card-content class="card-content">
-                  <p>{{ curso.name }}</p>
+                  <p class="card-content_name">{{ curso.name }}</p>
                 </mat-card-content>
                 <mat-card-actions class="mat-card-actions_wrapper">
                   <button mat-button class="matBtn" (click)="redirectToPayment(curso)">$ {{ curso.price }}</button>
@@ -112,13 +112,13 @@
           <div class="mat-card-cvr">
             <mat-card class="card" *ngFor="let curso of otherCourses">
               <mat-card-header>
-                <mat-card-title>
-                  <img [src]="curso.image" alt="{{ curso.name }}">
+                <mat-card-title class="mat-card-container__image">
+                  <img class="mat-card__image" [src]="curso.image" alt="{{ curso.name }}">
                 </mat-card-title>
               </mat-card-header>
               
               <mat-card-content>
-                <p>{{ curso.name }}</p>
+                <p class="mat-card__name">{{ curso.name }}</p>
               </mat-card-content>
               <mat-card-actions class="mat-card-actions_wrapper">
                 <button mat-button class="matBtn" (click)="redirectToPayment(curso)">$ {{ curso.price }}</button>
