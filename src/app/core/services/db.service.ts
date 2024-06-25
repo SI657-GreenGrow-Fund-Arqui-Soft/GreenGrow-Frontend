@@ -12,8 +12,8 @@ import {AuthService} from "./auth.service";
   providedIn: 'root',
 })
 export class DbService {
-  //baseUrl = 'https://green-grow-421820.rj.r.appspot.com/api/green-grow/v1';
-  baseUrl = 'http://localhost:8000/api/green-grow/v1';
+  baseUrl = 'https://green-grow-421820.rj.r.appspot.com/api/green-grow/v1';
+  //baseUrl = 'http://localhost:8000/api/green-grow/v1';
 
   constructor(private http: HttpClient, private authService: AuthService) {}
   token! : string;
