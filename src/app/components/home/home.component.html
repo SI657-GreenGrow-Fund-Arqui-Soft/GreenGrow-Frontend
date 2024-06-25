@@ -39,23 +39,26 @@
             Cultivate your knowledge with GreenGrow's flagship courses and grow your passion for agriculture!
           </p>
         </div>
-        <div class="mat-card-cvr">
-          <mat-card class="card" *ngFor="let curso of courses">
-            <mat-card-header>
-              <mat-card-title>
-                <img [src]="curso.image" alt="{{ curso.name }}">
-              </mat-card-title>
-            </mat-card-header>
-            
-            <mat-card-content>
-              <p>{{ curso.name }}</p>
-              <p>{{ curso.description }}</p>
-            </mat-card-content>
-            <mat-card-actions class="mat-card-actions_wrapper">
-              <button mat-button class="matBtn" (click)="redirectToPayment(curso)">$ {{ curso.price }}</button>
-              <button mat-button class="matBtn">{{ curso.rating }} ⭐</button>
-            </mat-card-actions>
-          </mat-card>
+        <div class="outer-container">
+          <div class="center">
+            <div class="single-row-grid">
+              <mat-card class="card-feature" *ngFor="let curso of featureCourses">
+                <mat-card-header class="card-header">
+                  <mat-card-title>
+                    <img [src]="curso.image" alt="{{ curso.name }}" class="card-header-img">
+                  </mat-card-title>
+                </mat-card-header>
+                
+                <mat-card-content class="card-content">
+                  <p>{{ curso.name }}</p>
+                </mat-card-content>
+                <mat-card-actions class="mat-card-actions_wrapper">
+                  <button mat-button class="matBtn" (click)="redirectToPayment(curso)">$ {{ curso.price }}</button>
+                  <button mat-button class="matBtn">{{ curso.rating }} ⭐</button>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+          </div>
         </div>
         <br><br>
         <div class="text-center">
@@ -67,7 +70,116 @@
       <br>
     </section>
 
+    <section class="destacados">
+      <div class="containerC">
+        <div class="boxC col3">
+          <h1>Other Products</h1>
+        </div>
+        <div>
+          <p id="txtDestacados">
+            
+          </p>
+          <nav class="section-navbar">
+            <ul>
+              <li
+                [class.active]="activeItem === 'home'"
+                (click)="handleItemClick('home')"
+              >
+                FUNDAMENTS
+              </li>
+              <li
+                [class.active]="activeItem === 'about'"
+                (click)="handleItemClick('about')"
+              >
+                HOME
+              </li>
+              <li
+                [class.active]="activeItem === 'services'"
+                (click)="handleItemClick('services')"
+              >
+                SUSTAINABILITY
+              </li>
+              <li
+                [class.active]="activeItem === 'contact'"
+                (click)="handleItemClick('contact')"
+              >
+                ADVANCED
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="center">
+          <div class="mat-card-cvr">
+            <mat-card class="card" *ngFor="let curso of otherCourses">
+              <mat-card-header>
+                <mat-card-title>
+                  <img [src]="curso.image" alt="{{ curso.name }}">
+                </mat-card-title>
+              </mat-card-header>
+              
+              <mat-card-content>
+                <p>{{ curso.name }}</p>
+              </mat-card-content>
+              <mat-card-actions class="mat-card-actions_wrapper">
+                <button mat-button class="matBtn" (click)="redirectToPayment(curso)">$ {{ curso.price }}</button>
+                <button mat-button class="matBtn">{{ curso.rating }} ⭐</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </div>
+        <br><br>
+        <div class="text-center">
+          <br><br>
+          <a class="destacados-button" href="/courses" >See All 🡢</a>
+        </div>
+      </div>
+      <br>
+      <br>
+    </section>
 
+    <div class="offer-section">
+      <div class="offer__image-container">
+        <img src="https://regaber.com/wp-content/uploads/2022/03/BLOG-REGABER.jpg" alt="Descriptive Image" class="offer__image">
+      </div>
+      <div class="offer__text-container">
+        <p class="offer__title">Exclusive Offer</p>
+        <p class="offer__description">"Unlock your ultimate upgrade! Get 40% off GreenGrow's Green Membership. Exclusive offer, for a limited time."</p>
+        <button class="offer__button">Purchase</button>
+      </div>
+    </div>
     <!--Oferta-->
 
+    <section class="destacados">
+      <div class="containerC">
+        <div class="boxC col3">
+          <h1>Our Services</h1>
+        </div>
+        <div>
+          <p id="txtDestacados">
+            Your Gateway to a World of Knowledge and Collaboration
+          </p>
+        </div>
+        <div class="service__outer-container">
+          <div class="service__center">
+            <div class="service__single-row-grid">
+              <mat-card class="service__card" *ngFor="let offer of offers">
+                <mat-card-header class="service__card-header">
+                  <mat-card-title>
+                    <img [src]="offer.image" alt="{{ offer.title }}" class="service__card-header-img">
+                  </mat-card-title>
+                </mat-card-header>
+                
+                <mat-card-content class="service__card-content">
+                  <p class="service__card-title">{{ offer.title }}</p>
+                  <p>{{ offer.description }}</p>
+                </mat-card-content>
+              </mat-card>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <br>
+      <br>
+    </section>
 </div>
