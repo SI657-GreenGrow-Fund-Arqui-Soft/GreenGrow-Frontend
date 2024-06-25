@@ -41,6 +41,42 @@
       <button routerLink="/createpost">Create Post</button>
     </div>
 
+
+    <!--Sección datos falsos-->
+    <div class="posts">
+          <div *ngFor="let post of postsFalse">
+            <div class="post-header">
+              <h3>Agricultural events and fairs1</h3>
+            </div>
+            <div class="post">
+              <div class="post-content">
+                <img [src]="post.image" alt="Imagen del Post" />
+                <div class="post-details">
+                  <h4>{{ post.title }}</h4>
+                  <div class="tags">
+                    <span *ngFor="let tag of post.tags">{{ tag }}</span>
+                  </div>
+                  <div class="post-description">
+                    <p>{{ post.description }}</p>
+                  </div>
+                  <p>{{ post.author }}</p>
+                  <p class="post-date">{{ post.date }}</p>
+                  <div class="interaction">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                  </div>
+                  <div class="post-stats">
+                    <span>Views: {{ post.views }}</span>
+                    <span>Likes: {{ post.likes }}</span>
+                    <span>Comments: {{ post.comments }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+
+    <!--Sección de datos db-->
     <div class="posts">
       <div *ngFor="let post of posts">
         <div class="post-header">
@@ -72,34 +108,32 @@
         </div>
       </div>
     </div>
+
+
   </div>
   <!-- Sección de posts -->
-
-  <!-- Columna 3: Publicidades (imágenes estáticas) -->
-  <div fxFlex.xs="100" fxFlex.gt-sm="20">
-    <div class="advertising">
-      <p>Advertising</p>
-      <a
-        href="https://www.agrisolucion.com/distribuidor/ver/greenhow/"
-        target="_blank"
-      >
-        <img
-          class="advertising-image"
-          src="https://www.agrisolucion.com/media/post/banner/Trips_pimiento_agricultuta_plaga.png?width=509&height=676"
-          alt="Publicidad 1"
-        />
+  <!--Sección de publicidad-->
+  <div class="container02">
+    <div class="card6">
+      <a href="https://www.agrisolucion.com/distribuidor/ver/greenhow/">
+        <h5>Advertising</h5>
+        <img src="https://i.imgur.com/O6WYNkN.png" alt="Título de la imagen" />
       </a>
-      <a
-        href="https://www.agrisolucion.com/distribuidor/ver/greenhow/"
-        target="_blank"
-      >
-        <img
-          class="advertising-image"
-          src="https://www.agrisolucion.com/media/post/banner/Captura_de_pantalla_2023-07-07_a_las_17.43.50.png?width=509&height=676"
-          alt="Publicidad 2"
-        />
+      <!-- Repite el bloque de publicidad según sea necesario -->
+    </div>
+    <div class="card6">
+      <a href="https://www.agrisolucion.com/distribuidor/ver/greenhow/">
+        <h5>Advertising</h5>
+        <img src="https://i.imgur.com/O6WYNkN.png" alt="Título de la imagen" />
       </a>
-      <!-- Agrega más publicidades aquí -->
+      <!-- Repite el bloque de publicidad según sea necesario -->
+    </div>
+    <div class="card6">
+      <a href="https://www.agrisolucion.com/distribuidor/ver/greenhow/">
+        <h5>Advertising</h5>
+        <img src="https://i.imgur.com/O6WYNkN.png" alt="Título de la imagen" />
+      </a>
+      <!-- Repite el bloque de publicidad según sea necesario -->
     </div>
   </div>
 </div>
